@@ -27,7 +27,7 @@ EOF
     echo "OK"
 
     echo "Adding web submodule ... "
-    git submodule add "${2}" web
+    git submodule add -b web "${2}" web || exit 1
     echo "OK"
 
     chmod +x "main.py"
