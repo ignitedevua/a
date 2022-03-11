@@ -1,0 +1,67 @@
+.page {
+    margin: auto;
+    width: 520px;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+#total_money {
+    width: 100px;
+    position: relative;
+    left: 410px;
+    color: rgb(44, 44, 44);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#total_money::before {
+    content: "$";
+}
+
+.inl {
+    display: inline-block;
+}
+
+.item {
+    vertical-align: middle;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.item>div {
+    height: 100%;
+    min-height: 100%;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    overflow: auto;
+}
+
+.item>.name {
+    width: 150px;
+}
+
+.item>.count {
+    width: 100px;
+}
+
+.item>.price {
+    width: 100px;
+}
+
+.item>.price::before {
+    content: "$";
+}
+
+.status {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.alive {
+    background-color: rgb(0, 214, 0);
+}
+
+.dead {
+    background-color: rgb(100, 0, 0);
+}
