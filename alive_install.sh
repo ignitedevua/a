@@ -22,7 +22,12 @@ main() {
     cat <<EOF > "config.ini"
 [Alive]
 git = ${git_url}
+web = ${2}
 EOF
+    echo "OK"
+
+    echo "Adding web submodule ... "
+    git submodule add "${2}" web
     echo "OK"
 
     chmod +x "main.py"
