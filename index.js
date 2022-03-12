@@ -14,7 +14,7 @@ function load() {
         var dateHtml = document.getElementById("date");
         var newDate = new Date();
         newDate.setTime(data.date * 1000);
-        dateHtml.innerText = newDate.toUTCString();
+        dateHtml.innerText = newDate.toLocaleString();
 
         var mainContainer = document.getElementById("stats");
         mainContainer.innerHTML = '';
