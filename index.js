@@ -13,7 +13,7 @@ function load() {
     function layoutData(data) {
         var dateHtml = document.getElementById("date");
         var newDate = new Date();
-        newDate.setTime(data.date || 0 * 1000);
+        newDate.setTime(data.date * 1000);
         dateHtml.innerText = newDate.toUTCString();
 
         var mainContainer = document.getElementById("stats");
