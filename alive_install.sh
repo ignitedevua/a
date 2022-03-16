@@ -31,12 +31,12 @@ EOF
     echo "OK"
 
     chmod +x "main.py"
-    echo "Scheduling cron ..."
-    crontab -l > cron_bkp
-    echo "*/15 * * * * cd "$(pwd)"; ./main.py >/dev/null 2>&1" >> cron_bkp
-    crontab cron_bkp
-    rm cron_bkp
-    echo "OK"
+    # echo "Scheduling cron ..."
+    # crontab -l > cron_bkp
+    # echo "*/15 * * * * cd "$(pwd)"; ./main.py >/dev/null 2>&1" >> cron_bkp
+    # crontab cron_bkp
+    # rm cron_bkp
+    # echo "OK"
 }
 
 main "${@}"
