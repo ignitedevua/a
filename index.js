@@ -29,10 +29,12 @@ function load() {
             var div = document.createElement("div");
             var page = list[i].page;
             var status = list[i].st;
+            var cf = Boolean(list[i].cf);
             div.innerHTML = `
-        <div class=" item">\
+            <div class=" item">\
                 <div class="status inl ${status?"alive":"dead"}">&nbsp;</div>\
                 <div class="url inl">${page}</div>\
+                <div class="inl ${cf?"secure":""}" title="cloudflare"></div>\
             </div>`;
             div = div.children[0];
             mainContainer.appendChild(div);
