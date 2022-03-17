@@ -69,3 +69,7 @@
 .secure::before {
     content: "🚷";
 }
+
+.url>span {
+    padding-left: 10px;
+}
