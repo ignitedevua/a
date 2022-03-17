@@ -25,16 +25,19 @@ function load() {
             } else
                 return a.st > b.st ? -1 : 1;
         });
+
+        let protected = ["cloudflare", "ddos-guard"]
+
         for (var i = 0; i < list.length; i++) {
             var div = document.createElement("div");
             var page = list[i].page;
             var status = list[i].st;
-            var cf = Boolean(list[i].cf);
+            var protect = list[i].protect;
             div.innerHTML = `
             <div class=" item">\
                 <div class="status inl ${status?"alive":"dead"}">&nbsp;</div>\
                 <div class="url inl">${page}</div>\
-                <div class="inl ${cf?"secure":""}" title="cloudflare"></div>\
+                <div class="inl ${protected.includes(protect)?"secure":""}" title="${protect}"></div>\
             </div>`;
             div = div.children[0];
             mainContainer.appendChild(div);
