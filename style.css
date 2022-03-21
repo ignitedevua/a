@@ -70,6 +70,16 @@
     content: "🚷";
 }
 
+.sec_type0::before {
+    content: "Ⓒ";
+    color: #E06D10;
+}
+
+.sec_type1::before {
+    content: "Ⓓ";
+    color: #2C7CB0;
+}
+
 .url>span {
     padding-left: 10px;
 }

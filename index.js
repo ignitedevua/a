@@ -34,11 +34,12 @@ function load() {
             var status = list[i].st;
             var protect = list[i].protect;
             var c_size = parseFloat(list[i].cs || 0).toFixed(2);
+            var s_type = "sec_type" + protected.indexOf(protect);
             div.innerHTML = `
             <div class=" item">\
                 <div class="status inl ${status?"alive":"dead"}">&nbsp;</div>\
                 <div class="url inl" title="${c_size}kb">${page}<span>${c_size}kb</span></div>\
-                <div class="inl ${protected.includes(protect)?"secure":""}" title="${protect}"></div>\
+                <div class="inl ${s_type}" title="${protect}"></div>\
             </div>`;
             div = div.children[0];
             mainContainer.appendChild(div);
