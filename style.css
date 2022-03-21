@@ -80,6 +80,11 @@
     color: #2C7CB0;
 }
 
+.sec_type2::before {
+    content: "Ⓑ";
+    color: #b02c2c;
+}
+
 .url>span {
     padding-left: 10px;
 }

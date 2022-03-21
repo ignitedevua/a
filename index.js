@@ -26,13 +26,13 @@ function load() {
                 return a.st > b.st ? -1 : 1;
         });
 
-        let protected = ["cloudflare", "ddos-guard"]
+        let protected = ["cloudflare", "ddos-guard", "beaver"]
 
         for (var i = 0; i < list.length; i++) {
             var div = document.createElement("div");
             var page = list[i].page;
             var status = list[i].st;
-            var protect = list[i].protect;
+            var protect = list[i].protect ? list[i].protect.toLowerCase() : "";
             var c_size = parseFloat(list[i].cs || 0).toFixed(2);
             var s_type = "sec_type" + protected.indexOf(protect);
             div.innerHTML = `
